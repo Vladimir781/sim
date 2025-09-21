@@ -9,17 +9,5 @@
   </head>
   <body>
     <div id="app"></div>
-    <script>
-      (function () {
-        const script = document.createElement('script');
-        if (location.protocol === 'file:') {
-          script.src = './game/dist/offline.bundle.js';
-        } else {
-          script.type = 'module';
-          script.src = './game/dist/main.js';
-        }
-        document.body.appendChild(script);
-      })();
-    </script>
   </body>
 </html>
