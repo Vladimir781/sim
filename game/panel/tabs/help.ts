@@ -1,0 +1,28 @@
+interface TabInstance {
+  id: string;
+  label: string;
+  element: HTMLElement;
+  update(): void;
+}
+
+export function createHelpTab(): TabInstance {
+  const element = document.createElement('div');
+  element.className = 'help';
+  element.innerHTML = `
+    <h2>Справка</h2>
+    <p>Этот прототип демонстрирует колони-сим в браузере. Управляйте частотой тиков и наблюдайте за агентами через панель.</p>
+    <ol>
+      <li>Откройте панель и вкладку «Обзор», нажмите «Старт».</li>
+      <li>На вкладке «Агенты» управляйте интенсивностью их работы.</li>
+      <li>Используйте вкладку «Мир» для перегенерации карты.</li>
+      <li>Сохраняйтесь во вкладке «Сейвы и данные».</li>
+    </ol>
+    <p>Все данные хранятся локально и доступны без сети.</p>
+  `;
+  return {
+    id: 'help',
+    label: 'Справка',
+    element,
+    update() {}
+  };
+}

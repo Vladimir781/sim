@@ -1,0 +1,41 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #0f0f13;
+  color: #f0f0f0;
+  font-family: 'Inter', system-ui, sans-serif;
+  height: 100%;
+}
+
+#app {
+  position: relative;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.viewport {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.45);
+  display: block;
+  max-width: 100%;
+}
+
+.panel-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  background: rgba(40, 40, 48, 0.9);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.panel-toggle.active {
+  background: #1f8fff;
+}
